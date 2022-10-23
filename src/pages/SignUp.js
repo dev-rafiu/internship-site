@@ -37,12 +37,10 @@ function SignUp() {
 
   return (
     <Container className="text-center section-center d-flex flex-column align-items-center justify-content-center p-0">
-      <Card className="w-100">
+      <Card className="w-100 mw=50">
         <Card.Body>
           <h2>Sign Up</h2>
-
           {error && <Alert variant="danger">{error}</Alert>}
-
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Control

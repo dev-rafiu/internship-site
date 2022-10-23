@@ -23,14 +23,14 @@ function Details() {
       <section className="details-section">
         <div className="section-center">
           <article className="detail">
-            <h2 className="title">{title}</h2>
+            <h2 className="title mb-3">{title}</h2>
 
-            <div className="about d-flex gap-2">
+            <div className="about d-flex gap-3 mb-3">
               <div className="logo-container">{company[0]}</div>
               <div className="info">
-                <h4 className="company">{company}</h4>
-                <h5 className="location">{location}</h5>
-                <p>{onsiteOrRemote}</p>
+                <h3 className="company text-capitalize m-0">{company}</h3>
+                <h4 className="location">{location}</h4>
+                <p className="p-0">{onsiteOrRemote}</p>
               </div>
             </div>
 
@@ -45,9 +45,11 @@ function Details() {
             <Link className="apply-link">Apply</Link>
           </article>
 
-          <Link to="/internships" className="back-link py-1 px-3 mt-2">
-            Back To Home
-          </Link>
+          <div className="text-center">
+            <Link to="/internships" className="back-link py-1 px-3 mt-3">
+              Back To Home
+            </Link>
+          </div>
         </div>
       </section>
     </>

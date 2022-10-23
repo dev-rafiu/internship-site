@@ -26,11 +26,8 @@ function Account() {
         <Card className="text-center w-100">
           <Card.Body>
             {error && <Alert variant="danger">{error}</Alert>}
-
             <h2 className="fs-2 mb-2">Account</h2>
-
             <p className="">Email: {user && user.email}</p>
-
             <Button
               onClick={handleLogOut}
               className="px-3 py-1 text-decoration-none logout action-btn"

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import { Form, Button, Card, Container, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../contexts/AuthContext";
@@ -7,11 +7,10 @@ function SignIn() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
   const { signin } = UserAuth();
 
-  const emailRef = useRef();
-  const passwordRef = useRef();
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,6 +31,10 @@ function SignIn() {
 
   return (
     <Container className="section-center  text-center d-flex flex-column align-items-center justify-content-center p-0">
+      <p className="py-5">
+        Use the email <b>user@login.net</b> and password <b>userlogin</b> or
+        create your own email and password{" "}
+      </p>
       <Card className="w-100">
         <Card.Body>
           <h2>Sign In</h2>

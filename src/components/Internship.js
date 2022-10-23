@@ -10,12 +10,12 @@ function Card({ item }) {
         <div className="logo-container">{company[0]}</div>
         <div className="info">
           <h3 className="title">{title}</h3>
-          <h4 className="company text-capitalize my-1">{company}</h4>
-          <h5 className="text-capitalize">{onsiteOrRemote}</h5>
+          <h4 className="company text-capitalize">{company}</h4>
+          <p className="text-capitalize">{onsiteOrRemote}</p>
         </div>
       </div>
 
-      <Link to={`/internship/${item.id}`} className="more">
+      <Link to={`/internship/${item.id}`} className="details-link">
         Details
       </Link>
     </article>

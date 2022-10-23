@@ -23,7 +23,7 @@ function Header() {
   return (
     <header className="header py-3">
       <div className="section-center">
-        <div className="d-flex align-items-center justify-content-between">
+        <div className="d-flex align-items-center justify-content-between top">
           <h3 className="name">Be-an-intern</h3>
 
           <button
@@ -49,7 +49,9 @@ function Header() {
             </li>
             {user && (
               <li>
-                <Link to="/account">{user.email}</Link>
+                <Link to="/account" className="email">
+                  {user.email}
+                </Link>
               </li>
             )}
           </ul>
