@@ -3,11 +3,7 @@ import { data } from "../data";
 import Internship from "../components/Internship";
 
 function Home() {
-  const [appData, setAppData] = useState([]);
-
-  useEffect(() => {
-    setAppData(data);
-  }, []);
+  const [appData, setAppData] = useState(data);
 
   return (
     <>

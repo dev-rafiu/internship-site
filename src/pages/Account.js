@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { UserAuth } from "../contexts/AuthContext";
+import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { Card, Alert, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -30,9 +30,8 @@ function Account() {
             <p className="">Email: {user && user.email}</p>
             <Button
               onClick={handleLogOut}
-              className="px-3 py-1 text-decoration-none logout action-btn"
+              className="px-3 py-1 my-2 cta-logout"
               type="button"
-              variant="outline-none"
             >
               Log Out
             </Button>
@@ -40,7 +39,7 @@ function Account() {
         </Card>
 
         <div className="text-center mt-3">
-          <Link className="back-link px-5 py-1" to="/internships">
+          <Link className="back-link action-btn px-5 py-1" to="/internships">
             Back To Home
           </Link>
         </div>

@@ -1,8 +1,8 @@
 import React from "react";
 function Summary({ summary }) {
   return (
-    <div className="summary">
-      <h3>Job Summary</h3>
+    <div className="summary mb-3 details">
+      <h3 className="mb-2">Summary</h3>
       <p>{summary}</p>
     </div>
   );

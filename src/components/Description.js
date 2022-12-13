@@ -1,10 +1,10 @@
 import React from "react";
-function Requirements({ description }) {
+function Requirements({ requirements }) {
   return (
-    <div className="description">
-      <h3>Responsibilities</h3>
+    <div className="description mb-3 details">
+      <h3 className="mb-2">Requirements</h3>
       <ul>
-        {description.map((item, index) => (
+        {requirements.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>

@@ -3,31 +3,25 @@ import { Form, Button, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
-function SignUp() {
+function LogIn() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
   const navigate = useNavigate();
-  const { signup } = UserAuth();
+  const { signin } = UserAuth();
 
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const confirmPasswordRef = useRef();
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (passwordRef.current.value !== confirmPasswordRef.current.value) {
-      return setError("Passwords do not match");
-    }
-
     try {
       setError("");
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
+      await signin(emailRef.current.value, passwordRef.current.value);
       navigate("/internships");
     } catch {
-      setError("Failed to sign up");
+      setError("Failed to sign in");
     }
     setLoading(false);
 
@@ -36,17 +30,21 @@ function SignUp() {
   };
 
   return (
-    <section className="signup-section">
+    <section className="login-section">
       <div className="form-container">
-        <h2>Sign Up</h2>
+        <p>
+          Use email <span>user@login.net</span> and password{" "}
+          <span>userlogin</span> to login or create your own email and password
+        </p>
+        <h2>LogIn</h2>
         {error && <Alert variant="danger">{error}</Alert>}
-
         <Form onSubmit={handleSubmit}>
           <Form.Group id="email">
             <Form.Control
               className="my-3"
               ref={emailRef}
               type="email"
+              required
               placeholder="email address"
             />
           </Form.Group>
@@ -56,30 +54,22 @@ function SignUp() {
               className="my-3"
               ref={passwordRef}
               type="password"
+              required
               placeholder="password"
             />
           </Form.Group>
 
-          <Form.Group id="confirm-password">
-            <Form.Control
-              className="my-3"
-              ref={confirmPasswordRef}
-              type="password"
-              placeholder="confirm password"
-            />
-          </Form.Group>
-
           <Button disabled={loading} type="submit" className="action-btn w-100">
-            Sign Up
+            Sign In
           </Button>
         </Form>
 
         <div className="text-center w-100 mt-2">
-          Already have an account? <Link to="/">sign in</Link>
+          Don't have an account? <Link to="/signup">Sign Up</Link>
         </div>
       </div>
     </section>
   );
 }
 
-export default SignUp;
+export default LogIn;
