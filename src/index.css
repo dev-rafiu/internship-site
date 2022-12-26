@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 *,
 *::before,
 *::after {
@@ -14,10 +15,9 @@
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Inter", sans-serif;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ====globals==== */
@@ -94,7 +94,17 @@ button {
 
 .cta-logout {
   color: var(--clr-white);
-  font-size: 0.8rem;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: var(--clr-dark);
+  border-bottom: 1px solid var(--clr-dark);
+  /* border-radius: ; */
+}
+
+.cta-logout:hover {
+  background: none;
+  color: var(--clr-dark);
 }
 
 @media (hover: hover) {
@@ -108,8 +118,8 @@ button {
 
 /* ===header=== */
 nav {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  background-color: var(--clr-white);
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); */
+  background-color: var(--clr-secondary);
   position: relative;
   z-index: 1;
 }
@@ -160,16 +170,19 @@ nav .account-link {
 .internship {
   border: 1px solid lightgray;
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
+/* .internship .title {
+} */
+
 .logo-container {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 5px;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: grid;
   place-content: center;
   background-color: var(--clr-dark);
@@ -192,7 +205,9 @@ nav .account-link {
 .details-link {
   color: var(--clr-secondary);
   font-size: 1rem;
-  text-align: right;
+  display: block;
+  width: max-content;
+  margin-left: auto;
 }
 
 /* ===DETAILS=== */

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { FaBars, FaUserCircle } from "react-icons/fa";
+import React from "react";
+
+import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
-function Header() {
+function Navbar() {
   const { user } = UserAuth();
 
   return (
@@ -23,4 +24,4 @@ function Header() {
     </nav>
   );
 }
-export default Header;
+export default Navbar;

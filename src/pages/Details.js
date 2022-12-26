@@ -36,19 +36,15 @@ function Details() {
                 </h4>
               </div>
             </div>
-
             <Summary summary={summary} />
-
-            {description && <Description requirements={description} />}
-
+            {description && <Description description={description} />}
             {qualifications && (
               <Qualifications qualifications={qualifications} />
             )}
-
             {benefits && <Benefits benefits={benefits} />}
-          </article>
-
-          <div>
+            <Link to="/internships" className="back-link py-1 px-3 mt-3">
+              Back To Home
+            </Link>
             <a
               href={url && url}
               className="apply-link py-1 px-3 mx-3"
@@ -57,10 +53,7 @@ function Details() {
             >
               Apply
             </a>
-            <Link to="/internships" className="back-link py-1 px-3 mt-3">
-              Back To Home
-            </Link>
-          </div>
+          </article>
         </div>
       </section>
     </>

@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 function PageNotFound() {
   return (
     <>
-      <section className="mt-5 text-center">
+      <div className="mt-5 text-center">
         <h1>Page Not Found</h1>
         <Link to="/" className="back-link px-5 py-1 mt-2">
-          Back To Home
+          Back
         </Link>
-      </section>
+      </div>
     </>
   );
 }

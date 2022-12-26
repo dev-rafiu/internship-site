@@ -1,4 +1,5 @@
 import React from "react";
+
 function Qualifications({ qualifications }) {
   return (
     <div className="qualifications mb-3 details">

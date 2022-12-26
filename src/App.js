@@ -15,33 +15,31 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <>
-      <AuthContextProvider>
-        <Navbar />
-        <Routes>
-          <Route
-            path="/internships"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/" element={<LogIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route
-            path="/account"
-            element={
-              <ProtectedRoute>
-                <Account />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/internshipy/:id" element={<Details />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </AuthContextProvider>
-    </>
+    <AuthContextProvider>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/internships"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route
+          path="/account"
+          element={
+            <ProtectedRoute>
+              <Account />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/internship/:id" element={<Details />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </AuthContextProvider>
   );
 }
 
