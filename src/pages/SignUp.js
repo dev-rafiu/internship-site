@@ -69,7 +69,7 @@ function SignUp() {
             />
           </Form.Group>
 
-          <Button disabled={loading} type="submit" className="action-btn w-100">
+          <Button disabled={loading} type="submit" className="signup-btn w-100">
             Sign Up
           </Button>
         </Form>
