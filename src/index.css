@@ -81,7 +81,7 @@ button {
   outline: none;
 }
 
-.action-btn,
+.signin-btn,
 .back-link,
 .apply-link {
   background: var(--clr-secondary);
@@ -101,26 +101,26 @@ button {
   /* border-radius: ; */
 }
 
-.cta-logout:hover {
-  background: none;
-  color: var(--clr-dark);
-}
-
 @media (hover: hover) {
-  .action-btn:hover,
+  .cta-logout:hover {
+    background: none;
+    color: var(--clr-dark);
+  }
+
+  .signin-btn:hover,
   .back-link:hover,
   .apply-link:hover {
-    background-color: hsl(205, 78%, 20%);
+    background-color: hsl(205, 78%, 50%);
     color: var(--clr-white);
   }
 }
 
 /* ===header=== */
-nav {
-  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); */
-  background-color: var(--clr-secondary);
+.navbar {
+  background-color: lightgray;
   position: relative;
   z-index: 1;
+  height: 5rem;
 }
 
 nav .site-name {
@@ -145,11 +145,12 @@ nav .account-link {
   transform: translate(-50%, -50%);
   width: min(90%, 500px);
   color: var(--clr-white);
-  /* z-index: -1; */
+  max-width: 300px;
 }
 .form-container p {
   font-size: 0.9rem;
   font-weight: 100;
+  margin-bottom: 1rem;
 }
 .form-container p span {
   color: var(--clr-secondary);
@@ -162,19 +163,17 @@ nav .account-link {
 .login-section,
 .signup-section {
   background-color: var(--clr-dark);
-  min-height: 90vh;
+  min-height: calc(100vh - 5rem);
+  text-align: center;
 }
 
 /* ===internship=== */
 .internship {
-  border: 1px solid lightgray;
+  border: 1px solid var(--clr-secondary);
   border-radius: 5px;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
 }
-
-/* .internship .title {
-} */
 
 .logo-container {
   width: 3.5rem;
@@ -188,7 +187,6 @@ nav .account-link {
   color: var(--clr-white);
 }
 
-.info,
 ::placeholder {
   color: var(--clr-dark);
 }

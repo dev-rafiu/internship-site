@@ -8,17 +8,25 @@ function Navbar() {
   const { user } = UserAuth();
 
   return (
-    <nav className="nav py-3">
+    <nav className="navbar">
       <div className="section-center">
         <div className="d-flex align-items-center justify-content-between top">
           <h3 className="site-name">internshipy</h3>
-          {user && (
+          {/* {user && (
             <button>
               <Link to="/account" className="account-link">
                 <FaUserCircle />
               </Link>
             </button>
-          )}
+          )} */}
+
+          <button>
+            {user && (
+              <Link to="/account" className="account-link">
+                <FaUserCircle />
+              </Link>
+            )}
+          </button>
         </div>
       </div>
     </nav>

@@ -32,10 +32,6 @@ function LogIn() {
   return (
     <section className="login-section">
       <div className="form-container">
-        <p>
-          Use email <span>user@login.net</span> and password{" "}
-          <span>userlogin</span> to login or create your own email and password
-        </p>
         <h2>LogIn</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
@@ -59,7 +55,7 @@ function LogIn() {
             />
           </Form.Group>
 
-          <Button disabled={loading} type="submit" className="action-btn w-100">
+          <Button disabled={loading} type="submit" className="signin-btn w-100">
             Sign In
           </Button>
         </Form>
