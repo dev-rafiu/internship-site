@@ -6,16 +6,16 @@ function Card({ item }) {
   const initial = company[0];
 
   return (
-    <article className="internship mb-4 px-3 pt-4 pb-3">
-      <div className="about d-flex gap-3">
-        <div className="logo-container">{initial}</div>
-        <div className="info">
-          <h4 className="title pb-1">{title}</h4>
-          <h5 className="company text-capitalize">{company}</h5>
+    <article className="internship">
+      <div className="about">
+        <div className="logo">{initial}</div>
+        <div>
+          <h4 className="internship-title">{title}</h4>
+          <h5 className="name-of-company">{company}</h5>
         </div>
       </div>
 
-      <Link to={`/internship/${item.id}`} className="details-link mt-3 py-0">
+      <Link to={`/internship/${item.id}`} className="details-link">
         Details
       </Link>
     </article>

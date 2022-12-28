@@ -28,9 +28,9 @@ function Details() {
           <article className="details">
             <h2 className="title mb-3">{title}</h2>
             <div className="about d-flex gap-3 mb-3">
-              <div className="logo-container">{company[0]}</div>
+              <div className="logo">{company[0]}</div>
               <div className="info">
-                <h3 className="company text-capitalize m-0">{company}</h3>
+                <h3 className="name-of-company">{company}</h3>
                 <h4 className="location">
                   {location} <span>({onsiteOrRemote})</span>
                 </h4>
@@ -47,7 +47,7 @@ function Details() {
             </Link>
             <a
               href={url && url}
-              className="apply-link py-1 px-3 mx-3"
+              className="apply-link"
               target="_blank"
               rel="noopener noreferrer"
             >

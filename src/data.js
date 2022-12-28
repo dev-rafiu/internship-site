@@ -80,7 +80,7 @@ export const data = [
   // =====
   {
     id: 4,
-    title: "Mobile Application Developer (Paid Internship)",
+    title: "Mobile App Developer (Paid Internship)",
     company: "Secdais Ghana Limited",
     location: "accra",
     summary: `Skills:Brainstorm and pitch app ideas.Developing fully functional and high-quality mobile applications by
@@ -88,7 +88,7 @@ export const data = [
     design, test, release and support.Analyze the requirements and propose the best possible solutions.
     Plan, implement and manage new projects and build mobile applications.Develop APIs for mobile functionality support and better user performance.
     Research and propose new mobile apps and products.Follow standard coding practices while writing code.Work with your team to lay out a framework.Program a prototype for testing.Fix bugs and improve the design.Qualifications / Experiences:Bachelor’s degree in Computer Science, Diploma / Certificate in Information Technology or relevant field.Perfect mastery of FLUTTER, React Native, Android (Dart/Java), iOS (Swift)Proven +2 years of work experience as a Mobile App Developer, Software Developer or a similar role in IT and Development Department.Portfolio of successfully released mobile apps on the app store.Have more or less advanced knowledge in computer science.RemunerationThe salary and conditions
-    of service are highly competitive and negotiablePlease send your CV to contact@secdais.com www.secdais.comhttps://www.youtube.com/watch?v=k5Vbu60T41g`,
+    of service are highly competitive and negotiable. Please send your CV to contact@secdais.com`,
     url: `https://jobsghana.stalva.com/job/mobile-application-developer-paid-internship/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic`,
     onsiteOrRemote: "on-site",
     jobType: "full-time",
@@ -133,7 +133,7 @@ export const data = [
   // =====
   {
     id: 7,
-    title: "Junior Blockchain Developer (Remote Internship)",
+    title: "Junior Blockchain Developer",
     company: "brainset",
     location: "accra",
     summary: `

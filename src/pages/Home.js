@@ -11,12 +11,15 @@ function Home() {
   }, []);
 
   return (
-    <main className="internships-container">
-      <div className="section-center my-5">
+    <main>
+      {/* <div className="container"> */}
+      <h2>Available Internships</h2>
+      <section className="section-center">
         {internshipsList.map((item) => (
           <Internship key={item.id} item={item} />
         ))}
-      </div>
+      </section>
+      {/* </div> */}
     </main>
   );
 }

@@ -17,6 +17,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
+  background: rgb(234, 242, 249);
 }
 
 /* ====globals==== */
@@ -117,9 +118,9 @@ button {
   }
 }
 
-/* ===header=== */
+/* ===navbar=== */
 .navbar {
-  background-color: lightgray;
+  background-color: var(--clr-white);
   position: relative;
   z-index: 1;
   height: 5rem;
@@ -127,7 +128,6 @@ button {
 
 nav .site-name {
   color: var(--clr-dark);
-  font-weight: bold;
 }
 
 nav .account-link {
@@ -169,15 +169,23 @@ nav .account-link {
   text-align: center;
 }
 
-/* ===internship=== */
-.internship {
-  border: 1px solid var(--clr-secondary);
-  border-radius: 5px;
-  max-width: 500px;
-  margin: 0 auto;
+main h2 {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--clr-dark);
 }
 
-.logo-container {
+/* ===internship=== */
+.internship {
+  border: 1px solid lightgray;
+  background: var(--clr-white);
+  border-radius: 5px;
+  max-width: 500px;
+  padding: 0.8rem;
+  margin: 1rem auto;
+}
+
+.logo {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 5px;
@@ -189,12 +197,19 @@ nav .account-link {
   color: var(--clr-white);
 }
 
+.internship .about {
+  display: flex;
+  gap: 0.8rem;
+}
+
 ::placeholder {
   color: var(--clr-dark);
 }
 
-.company {
+.name-of-company {
   color: var(--clr-secondary);
+  text-transform: capitalize;
+  margin-top: 0.3rem;
 }
 
 .location {
@@ -209,6 +224,10 @@ nav .account-link {
   margin-left: auto;
 }
 
+.details-link:hover {
+  color: var(--clr-secondary);
+}
+
 /* ===DETAILS=== */
 .details-section {
   padding: 2rem 0;
@@ -218,13 +237,14 @@ nav .account-link {
   max-width: 600px;
 }
 
-.details .title {
-  margin: 0.5rem 0;
-}
-
 .summary p,
 .details li {
   font-size: 1rem;
   color: var(--clr-dark);
+}
+
+.apply-link {
+  padding: 0.3rem 2rem;
+  margin: 0 1rem;
 }
 /* ===END OF DETAILS=== */
